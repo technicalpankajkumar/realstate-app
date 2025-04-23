@@ -32,8 +32,8 @@ const Index = () => {
               <Text className='text-xs font-rubik text-black-100'>Good Morning!</Text>
               <Text className='text-base font-rubik-medium text-black-300'>{user?.name}</Text>
             </View>
-            <Image source={icons.bell} className='size-6' />
           </View>
+          <Image source={icons.bell} className='size-6' />
         </View>
         {/* search component start here */}
         <Search />
