@@ -49,9 +49,9 @@ useEffect(()=>{
        }
        ListHeaderComponent={
         <View className='px-2'>
-          <View className='flex flex-row justify-between items-center mt-4'>
-            <TouchableOpacity onPress={()=>router.back()} className='text-xl font-rubik-bold p-1 bg-primary-300 rounded-full '>
-              <Image source={icons.backArrow} className='size-8 text-white' resizeMode='contain'/>
+          <View className='flex flex-row justify-between items-center mt-4 px-2'>
+            <TouchableOpacity onPress={()=>router.back()} className='flex flex-row bg-primary-200 rounded-full size-11 items-center justify-center '>
+              <Image source={icons.backArrow} className='size-5 ' resizeMode='contain'/>
             </TouchableOpacity>
             <Text className='text-xl font-rubik-semiBold text-black-100 border-x-2 border-black-300 px-4'>Search Your Dream Home</Text>
             <Image source={icons.bell} className='size-6' resizeMode='contain'/>
