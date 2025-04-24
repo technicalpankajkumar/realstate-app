@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity, Button } from 'react-native'
 import React from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import images from '@/constants/images'
@@ -8,13 +8,13 @@ import { Card, FeaturedCard } from '@/components/Cards'
 import Filter from '@/components/Filters'
 import { FlatList } from 'react-native-gesture-handler'
 import { useGlobalContext } from '@/lib/globalProvider'
+import seed from '@/lib/seed'
 
 const Index = () => {
   const {user} = useGlobalContext();
 
   return (
     <SafeAreaProvider className='bg-white h-full'>
-
       <FlatList 
        data={[1,2,3,5]}
        renderItem={({item})=><Card/>}
@@ -27,7 +27,7 @@ const Index = () => {
         <View className='px-5'>
         <View className='flex flex-row items-center justify-between mt-5'>
           <View className='flex flex-row items-center'>
-            <Image source={{uri:user?.avatar}} className='size-13 rounded-full' />
+            <Image source={{uri:user?.avatar}} className='size-12 rounded-full' />
             <View className='flex flex-col items-start ml-2 justify-center'>
               <Text className='text-xs font-rubik text-black-100'>Good Morning!</Text>
               <Text className='text-base font-rubik-medium text-black-300'>{user?.name}</Text>
@@ -58,14 +58,16 @@ const Index = () => {
               />
             </View>
           {/* here render recommandation data */}
-          <View className='mt-5 mb-2'>
+          <View className='mt-5 '>
           <View className='flex flex-row items-center justify-between'>
             <Text className='text-xl font-rubik-bold text-black-300'>Our Recommendation</Text>
             <TouchableOpacity>
               <Text className='text-base font-rubik-bold text-black-300'>See More</Text>
             </TouchableOpacity>
           </View>
+          <View>
           <Filter/>
+          </View>
           </View>
           
         </View>

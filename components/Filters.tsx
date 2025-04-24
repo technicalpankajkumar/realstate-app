@@ -21,7 +21,7 @@ const Filter = () => {
     }
 
     return (
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} className='mt-3 mb-2'>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} className='mt-3 '>
             {
                 categories.map((item, index) => (
                     <TouchableOpacity onPress={() => handleCategory(item.category)} className={`flex flex-cols items-start mr-4 px-4 py-1 rounded-full ${selectedCategory == item.category ? 'bg-primary-300':'bg-primary-100 border border-primary-200'}`}>
@@ -29,6 +29,7 @@ const Filter = () => {
                     </TouchableOpacity>
                 ))
             }
+           
         </ScrollView>
     )
 }
