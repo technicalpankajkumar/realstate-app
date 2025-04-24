@@ -47,14 +47,16 @@ const profile = () => {
           <Text className='text-xl font-rubik-bold'>Profile</Text>
           <Image source={icons.bell} className='size-5' resizeMode='contain'/>
         </View>
-        <View className='flex-row justify-center flex mt-5'>
-          <View className='flex flex-col items-center relative mt-5'>
-            <Image source={{uri:user?.avatar}} className='size-40 relative rounded-full'/>
+        <View className='flex-row justify-center flex mt-3'>
+          <View className='flex flex-col items-center relative mt-5 gap-y-1'>
+            <View className='relative p-2'>
+            <Image source={{uri:user?.avatar}} className='size-28 rounded-full'/>
             <TouchableOpacity className='absolute bottom-5 right-3'>
-              <Image source={icons.edit} className='size-8'/>
+              <Image source={icons.edit} className='size-6'/>
             </TouchableOpacity>
-              <Text className='text-2xl font-rubik-bold mt-3'>{user?.name}</Text>
-              <Text className='text-base font-rubik-semiBold mt-1 text-black-100'>{user?.email}</Text>
+            </View>
+              <Text className='text-2xl font-rubik-bold mt-2'>{user?.name}</Text>
+              <Text className='text-base font-rubik-semiBold mt-0.5 text-black-100'>{user?.email}</Text>
           </View>
         </View>
         <View className='flex flex-col mt-10'>

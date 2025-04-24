@@ -44,7 +44,7 @@ useEffect(()=>{
       <FlatList 
        data={propertiesData}
        renderItem={({item})=><Card items={item} onPress={()=>handleCardPress(item.$id)}/>}
-       keyExtractor={(item)=>item.$id.toString()}
+       keyExtractor={(item)=>item.$id}
        numColumns={2}
        contentContainerClassName='pb-32'
        columnWrapperClassName='flex gap-5 px-5'
@@ -81,7 +81,7 @@ useEffect(()=>{
               <FlatList
               data={latestProperiesData}
               renderItem={({item})=> <FeaturedCard items={item} onPress={()=>handleCardPress(item.$id)}/>}
-              keyExtractor={(item) => item.$id.toString()}
+              keyExtractor={(item) => item.$id}
               horizontal
               bounces={false}
               showsHorizontalScrollIndicator={false}

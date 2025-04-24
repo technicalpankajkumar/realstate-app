@@ -35,7 +35,7 @@ export const FeaturedCard = ({ items: { name, rating, address, price, image }, o
 
 export const Card = ({ items: { name, rating, address, price, image }, onPress }: cardProps) => {
     return (
-        <TouchableOpacity onPress={onPress} className='flex-1 w-full mt-1 px-3 py-4 rounded-lg bg-white shodow-lg shadow-black-100/70 relative'>
+        <TouchableOpacity onPress={onPress} className='flex-1 w-full mt-2 px-3 py-4 rounded-lg bg-white shodow-lg shadow-black-100/70 relative'>
             <View className='flex flex-row items-center absolute px-2 top-5 right-5 bg-white/90 p-1 rounded-full z-50'>
                 <Image source={icons.star} className='size-3.5' />
                 <Text className='text-xs font-rubik-bold text-primary-300 ml-0.5'>{rating}</Text>
